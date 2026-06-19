@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heena Jewels – 925 Silver Jewellery Manufacturers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Cinzel:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --black: #080608;
+            --black-soft: #100E10;
+            --black-card: #141214;
+            --black-hover: #1C191C;
+            --gold: #C9A84C;
+            --gold-bright: #E8C97A;
+            --gold-dim: #8A6E30;
+            --gold-glow: rgba(201,168,76,0.18);
+            --cream: #F7F0E3;
+            --cream-dim: #B8A888;
+            --white: #FDFBF8;
+            --border: rgba(201,168,76,0.18);
+            --border-bright: rgba(201,168,76,0.45);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--cream);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        /* CURSOR */
+        .cursor {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: var(--gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%,-50%);
+            transition: width .2s, height .2s;
+        }
+
+        .cursor-ring {
+            position: fixed;
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(201,168,76,0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99998;
+            transform: translate(-50%,-50%);
+            transition: all .12s ease;
+        }
+
+        /* NOISE */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9997;
+            opacity: .4;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.6rem 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(to bottom, rgba(8,6,8,.92) 0%, transparent 100%);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: .9rem;
+            text-decoration: none;
+        }
+
+        .nav-brand {
+            font-family: 'Cinzel',serif;
+            font-size: .95rem;
+            letter-spacing: .28em;
+            color: var(--gold);
+            font-weight: 400;
+        }
+
+            .nav-brand span {
+                display: block;
+                font-family: 'DM Sans',sans-serif;
+                font-size: .52rem;
+                letter-spacing: .35em;
+                color: var(--cream-dim);
+                font-weight: 300;
+                margin-top: 2px;
+            }
+
+        .nav-links {
+            display: flex;
+            gap: 2.8rem;
+            list-style: none;
+        }
+
+            .nav-links a {
+                font-size: .68rem;
+                letter-spacing: .25em;
+                text-transform: uppercase;
+                color: var(--cream-dim);
+                text-decoration: none;
+                position: relative;
+                transition: color .3s;
+            }
+
+                .nav-links a::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background: var(--gold);
+                    transition: width .3s;
+                }
+
+                .nav-links a:hover {
+                    color: var(--gold-bright);
+                }
+
+                    .nav-links a:hover::after {
+                        width: 100%;
+                    }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-rings {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+        }
+
+            .ring:nth-child(1) {
+                width: 680px;
+                height: 680px;
+                animation: spinR 70s linear infinite;
+            }
+
+            .ring:nth-child(2) {
+                width: 480px;
+                height: 480px;
+                border-color: rgba(201,168,76,.08);
+                animation: spinR 45s linear infinite reverse;
+            }
+
+            .ring:nth-child(3) {
+                width: 300px;
+                height: 300px;
+                border-color: rgba(201,168,76,.22);
+            }
+
+        @keyframes spinR {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(201,168,76,.06) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            pointer-events: none;
+        }
+
+        .hero-vline {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, var(--border-bright) 30%, var(--border-bright) 70%, transparent);
+            transform: translateX(-50%);
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10rem 5rem 6rem 8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            animation: fadeLeft 1s .2s both;
+        }
+
+        .eyebrow-line {
+            width: 38px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .eyebrow-text {
+            font-size: .63rem;
+            letter-spacing: .45em;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display',serif;
+            font-weight: 400;
+            font-size: clamp(3.2rem,5.8vw,6.2rem);
+            line-height: 1;
+            color: var(--white);
+            animation: fadeLeft 1s .4s both;
+        }
+
+        .hero-italic {
+            font-family: 'Playfair Display',serif;
+            font-style: italic;
+            font-size: clamp(2.8rem,5.3vw,5.8rem);
+            color: var(--gold);
+            display: block;
+            line-height: 1.15;
+            animation: fadeLeft 1s .55s both;
+        }
+
+        .hero-desc {
+            margin-top: 2.2rem;
+            font-size: .88rem;
+            line-height: 1.9;
+            color: var(--cream-dim);
+            max-width: 360px;
+            animation: fadeLeft 1s .7s both;
+        }
+
+        .badges {
+            display: flex;
+            gap: .75rem;
+            flex-wrap: wrap;
+            margin-top: 2.2rem;
+            animation: fadeLeft 1s .85s both;
+        }
+
+        .badge {
+            padding: .38rem .95rem;
+            border: 1px solid var(--border);
+            font-size: .6rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--cream-dim);
+        }
+
+        .badge-g {
+            background: var(--gold);
+            color: var(--black);
+            border-color: var(--gold);
+            font-weight: 500;
+        }
+
+        .cta-row {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2.8rem;
+            animation: fadeLeft 1s 1s both;
+        }
+
+        .btn-p {
+            display: inline-flex;
+            align-items: center;
+            gap: .7rem;
+            padding: .95rem 2.4rem;
+            background: var(--gold);
+            color: var(--black);
+            font-size: .68rem;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background .3s;
+        }
+
+            .btn-p::after {
+                content: '→';
+                transition: transform .3s;
+            }
+
+            .btn-p:hover {
+                background: var(--gold-bright);
+            }
+
+                .btn-p:hover::after {
+                    transform: translateX(5px);
+                }
+
+        .btn-g {
+            font-size: .68rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--cream-dim);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 3px;
+            transition: color .3s, border-color .3s;
+        }
+
+            .btn-g:hover {
+                color: var(--gold-bright);
+                border-color: var(--gold);
+            }
+
+        .hero-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            padding: 8rem 5rem 6rem;
+        }
+
+        .big-logo-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+        }
+
+            .logo-ring:nth-child(1) {
+                width: 320px;
+                height: 320px;
+                animation: pulseRing 4s ease-in-out infinite;
+            }
+
+            .logo-ring:nth-child(2) {
+                width: 240px;
+                height: 240px;
+                border-color: rgba(201,168,76,.3);
+                animation: pulseRing 4s 1.3s ease-in-out infinite;
+            }
+
+        @keyframes pulseRing {
+            0%,100% {
+                opacity: .5;
+                box-shadow: 0 0 0 0 transparent;
+            }
+
+            50% {
+                opacity: 1;
+                box-shadow: 0 0 40px 8px rgba(201,168,76,.07);
+            }
+        }
+
+        .stat-cards {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .stat {
+            position: absolute;
+            background: var(--black-card);
+            border: 1px solid var(--border);
+            padding: 1rem 1.3rem;
+            text-align: center;
+            min-width: 120px;
+            pointer-events: all;
+        }
+
+            .stat:nth-child(1) {
+                top: 5%;
+                left: -12%;
+                animation: fadeIn 1s 1.2s both;
+            }
+
+            .stat:nth-child(2) {
+                bottom: 10%;
+                right: -10%;
+                animation: fadeIn 1s 1.4s both;
+            }
+
+            .stat:nth-child(3) {
+                top: 50%;
+                left: -20%;
+                transform: translateY(-50%);
+                animation: fadeIn 1s 1.6s both;
+            }
+
+            .stat .n {
+                font-family: 'Playfair Display',serif;
+                font-size: 2rem;
+                color: var(--gold);
+                line-height: 1;
+            }
+
+            .stat .l {
+                font-size: .58rem;
+                letter-spacing: .2em;
+                color: var(--cream-dim);
+                text-transform: uppercase;
+                margin-top: .3rem;
+            }
+
+        @keyframes fadeLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-28px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0)
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(.95)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        /* MARQUEE */
+        .marquee {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 1.1rem 0;
+            overflow: hidden;
+            background: var(--black-soft);
+        }
+
+        .marquee-track {
+            display: flex;
+            animation: marquee 22s linear infinite;
+            white-space: nowrap;
+        }
+
+        .mi {
+            display: inline-flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 0 3rem;
+            font-size: .62rem;
+            letter-spacing: .38em;
+            color: var(--cream-dim);
+            text-transform: uppercase;
+        }
+
+        .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0)
+            }
+
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        /* FEATURES */
+        .feat-section {
+            padding: 8rem 8rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 6rem;
+            align-items: start;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .feat-left h2 {
+            font-family: 'Playfair Display',serif;
+            font-size: clamp(2rem,3vw,3rem);
+            font-weight: 400;
+            line-height: 1.15;
+            color: var(--white);
+        }
+
+            .feat-left h2 em {
+                font-style: italic;
+                color: var(--gold);
+            }
+
+        .feat-left p {
+            margin-top: 1.4rem;
+            font-size: .83rem;
+            line-height: 1.9;
+            color: var(--cream-dim);
+        }
+
+        .feat-left .line {
+            width: 48px;
+            height: 2px;
+            background: var(--gold);
+            margin-top: 1.8rem;
+        }
+
+        .feat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5px;
+            background: var(--border);
+        }
+
+        .fc {
+            background: var(--black-card);
+            padding: 2.2rem;
+            position: relative;
+            overflow: hidden;
+            transition: background .3s;
+        }
+
+            .fc::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 2px;
+                height: 0;
+                background: var(--gold);
+                transition: height .4s;
+            }
+
+            .fc:hover {
+                background: var(--black-hover);
+            }
+
+                .fc:hover::before {
+                    height: 100%;
+                }
+
+        .fc-icon {
+            font-size: 1.5rem;
+            margin-bottom: 1.1rem;
+            display: block;
+        }
+
+        .fc h3 {
+            font-family: 'Playfair Display',serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: .5rem;
+        }
+
+        .fc p {
+            font-size: .77rem;
+            line-height: 1.8;
+            color: var(--cream-dim);
+        }
+
+        /* GALLERY */
+        .gallery-sec {
+            padding: 8rem 4rem;
+            background: var(--black-soft);
+        }
+
+        .sec-hdr {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .sec-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 1.2rem;
+            font-size: .62rem;
+            letter-spacing: .45em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 1.4rem;
+        }
+
+            .sec-eyebrow::before, .sec-eyebrow::after {
+                content: '';
+                display: inline-block;
+                width: 28px;
+                height: 1px;
+                background: var(--gold-dim);
+            }
+
+        .sec-title {
+            font-family: 'Playfair Display',serif;
+            font-size: clamp(2.2rem,4.5vw,3.8rem);
+            font-weight: 400;
+            color: var(--white);
+            line-height: 1.1;
+        }
+
+            .sec-title em {
+                font-style: italic;
+                color: var(--gold);
+            }
+
+        .sec-sub {
+            margin-top: 1.1rem;
+            font-size: .83rem;
+            color: var(--cream-dim);
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .g-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 2px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .g-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background: var(--black-card);
+            min-height: 260px;
+        }
+
+            .g-item:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            .g-item:nth-child(8) {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            .g-item:nth-child(10) {
+                grid-row: span 2;
+                grid-column: span 1;
+            }
+
+            .g-item:nth-child(13) {
+                grid-row: span 2;
+                grid-column: span 1;
+            }
+
+            .g-item:nth-child(14) {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+
+            .g-item:nth-child(17) {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+
+            .g-item:nth-child(21) {
+                grid-row: span 2;
+                grid-column: span 1;
+            }
+
+            .g-item:nth-child(23) {
+                grid-row: span 1;
+                grid-column: span 2;
+            }
+
+            .g-item:nth-child(25) {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+
+            .g-item:nth-child(32) {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+
+            .g-item img {
+                width: 100%;
+                height: 100%;
+                min-height: 260px;
+                object-fit: cover;
+                display: block;
+                transition: transform .7s cubic-bezier(.25,.46,.45,.94), filter .4s;
+                filter: brightness(.87) saturate(.9);
+            }
+
+            .g-item:hover img {
+                transform: scale(1.07);
+                filter: brightness(1) saturate(1.1);
+            }
+
+        .wt-badge {
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            background: rgba(8,6,8,.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-bright);
+            padding: .27rem .7rem;
+            font-size: .58rem;
+            letter-spacing: .2em;
+            color: var(--gold-bright);
+            text-transform: uppercase;
+            z-index: 3;
+        }
+
+        .g-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(8,6,8,.88) 0%, rgba(8,6,8,.35) 40%, transparent 70%);
+            opacity: 0;
+            transition: opacity .4s;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.6rem;
+        }
+
+        .g-item:hover .g-overlay {
+            opacity: 1;
+        }
+
+        .g-name {
+            font-family: 'Playfair Display',serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: .25rem;
+        }
+
+        .g-meta {
+            font-size: .62rem;
+            letter-spacing: .2em;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        .g-zoom {
+            position: absolute;
+            top: 13px;
+            right: 13px;
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(201,168,76,.5);
+            background: rgba(8,6,8,.55);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: .85rem;
+            opacity: 0;
+            z-index: 4;
+            transition: opacity .3s, background .3s;
+        }
+
+        .g-item:hover .g-zoom {
+            opacity: 1;
+        }
+
+        .g-zoom:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        /* LIGHTBOX */
+        .lb {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .35s;
+        }
+
+            .lb.open {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+        .lb-bd {
+            position: absolute;
+            inset: 0;
+            background: rgba(4,3,4,.95);
+            backdrop-filter: blur(14px);
+        }
+
+        .lb-box {
+            position: relative;
+            z-index: 2;
+            max-width: 880px;
+            width: 100%;
+            transform: translateY(18px) scale(.97);
+            transition: transform .35s;
+        }
+
+        .lb.open .lb-box {
+            transform: translateY(0) scale(1);
+        }
+
+        .lb-img-wrap {
+            position: relative;
+            line-height: 0;
+            border: 1px solid var(--border);
+        }
+
+        .lb-img {
+            width: 100%;
+            max-height: 76vh;
+            object-fit: contain;
+            display: block;
+            background: var(--black-card);
+        }
+
+        .lb-foot {
+            border: 1px solid var(--border);
+            border-top: none;
+            background: var(--black-card);
+            padding: 1.2rem 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .lb-name {
+            font-family: 'Playfair Display',serif;
+            font-size: 1.25rem;
+            color: var(--white);
+        }
+
+        .lb-wt {
+            font-size: .62rem;
+            letter-spacing: .28em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-top: .2rem;
+        }
+
+        .lb-counter {
+            font-size: .68rem;
+            letter-spacing: .18em;
+            color: var(--cream-dim);
+        }
+
+            .lb-counter b {
+                color: var(--gold);
+                font-weight: 400;
+            }
+
+        .lb-close {
+            position: absolute;
+            top: -3.2rem;
+            right: 0;
+            background: none;
+            border: none;
+            color: var(--cream-dim);
+            font-size: 1.5rem;
+            cursor: pointer;
+            font-family: 'DM Sans';
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            transition: color .2s;
+        }
+
+            .lb-close span {
+                font-size: .6rem;
+                letter-spacing: .25em;
+                text-transform: uppercase;
+            }
+
+            .lb-close:hover {
+                color: var(--gold);
+            }
+
+        .lb-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--black-card);
+            border: 1px solid var(--border);
+            color: var(--gold);
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            z-index: 5;
+            transition: background .2s, border-color .2s;
+        }
+
+            .lb-nav:hover {
+                background: var(--gold);
+                color: var(--black);
+                border-color: var(--gold);
+            }
+
+        .lb-prev {
+            left: -60px;
+        }
+
+        .lb-next {
+            right: -60px;
+        }
+
+        /* PLATING */
+        .plating-sec {
+            padding: 8rem 8rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .plt-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 2px;
+            margin-top: 4rem;
+            background: var(--border);
+        }
+
+        .plt-card {
+            background: var(--black-card);
+            padding: 3rem 2.5rem;
+            text-align: center;
+            transition: background .3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .plt-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: linear-gradient(90deg,transparent,var(--gold),transparent);
+                transform: scaleX(0);
+                transition: transform .4s;
+            }
+
+            .plt-card:hover {
+                background: var(--black-hover);
+            }
+
+                .plt-card:hover::before {
+                    transform: scaleX(1);
+                }
+
+        .orb {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            margin: 0 auto 1.4rem;
+        }
+
+        .orb-ox {
+            background: radial-gradient(circle at 35% 35%,#6B6B6B,#1A1A1A);
+        }
+
+        .orb-rh {
+            background: radial-gradient(circle at 35% 35%,#E8E8F0,#8888A0);
+        }
+
+        .orb-gd {
+            background: radial-gradient(circle at 35% 35%,#FFE066,#C9A84C);
+        }
+
+        .plt-card h3 {
+            font-family: 'Playfair Display',serif;
+            font-size: 1.15rem;
+            color: var(--white);
+            font-weight: 400;
+            margin-bottom: .7rem;
+        }
+
+        .plt-card p {
+            font-size: .77rem;
+            line-height: 1.8;
+            color: var(--cream-dim);
+        }
+
+        /* CONTACT */
+        .contact-sec {
+            padding: 8rem 8rem;
+            background: var(--black-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .contact-sec::before {
+                content: '';
+                position: absolute;
+                width: 700px;
+                height: 700px;
+                background: radial-gradient(circle, rgba(201,168,76,.04) 0%, transparent 70%);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                pointer-events: none;
+            }
+
+        .contact-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 7rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .c-left h2 {
+            font-family: 'Playfair Display',serif;
+            font-size: clamp(2.2rem,3.8vw,3.5rem);
+            font-weight: 400;
+            line-height: 1.1;
+            color: var(--white);
+        }
+
+            .c-left h2 em {
+                font-style: italic;
+                color: var(--gold);
+            }
+
+        .c-left p {
+            margin-top: 1.4rem;
+            font-size: .83rem;
+            line-height: 1.9;
+            color: var(--cream-dim);
+            max-width: 380px;
+        }
+
+        .c-details {
+            margin-top: 2.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+
+        .c-item {
+            display: flex;
+            gap: 1.1rem;
+            align-items: flex-start;
+        }
+
+        .c-icon {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .95rem;
+            flex-shrink: 0;
+            color: var(--gold);
+        }
+
+        .c-txt h4 {
+            font-size: .6rem;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: .25rem;
+            font-weight: 400;
+        }
+
+        .c-txt p {
+            font-size: .83rem;
+            color: var(--cream);
+            line-height: 1.6;
+        }
+
+        .c-right {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: var(--border);
+        }
+
+        .c-person {
+            background: var(--black-card);
+            padding: 2.4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .c-person::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: linear-gradient(90deg,transparent,var(--gold),transparent);
+                transform: scaleX(0);
+                transition: transform .4s;
+            }
+
+            .c-person:hover::after {
+                transform: scaleX(1);
+            }
+
+        .c-initial {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-glow);
+            border: 1px solid var(--border-bright);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display',serif;
+            font-size: 1.35rem;
+            color: var(--gold);
+            margin-bottom: 1.1rem;
+        }
+
+        .c-person h3 {
+            font-family: 'Playfair Display',serif;
+            font-size: .95rem;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: .35rem;
+        }
+
+        .c-person .role {
+            font-size: .58rem;
+            letter-spacing: .25em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: .9rem;
+        }
+
+        .c-person .phone {
+            font-size: .82rem;
+            color: var(--cream-dim);
+        }
+
+        .c-addr {
+            grid-column: span 2;
+            background: var(--black-card);
+            padding: 1.8rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .c-addr-icon {
+            font-size: 1.4rem;
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .c-addr h4 {
+            font-size: .58rem;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: .25rem;
+        }
+
+        .c-addr p {
+            font-size: .82rem;
+            color: var(--cream-dim);
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2.8rem 8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--black);
+        }
+
+        .f-brand {
+            font-family: 'Cinzel',serif;
+            font-size: .82rem;
+            letter-spacing: .28em;
+            color: var(--gold);
+        }
+
+            .f-brand span {
+                display: block;
+                font-family: 'DM Sans';
+                font-size: .58rem;
+                letter-spacing: .22em;
+                color: var(--cream-dim);
+                margin-top: 3px;
+            }
+
+        .f-copy {
+            font-size: .62rem;
+            letter-spacing: .13em;
+            color: var(--cream-dim);
+        }
+
+        /* VISITOR BADGE */
+        .v-badge {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 500;
+            background: var(--black-card);
+            border: 1px solid var(--border);
+            padding: .75rem 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: .65rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .v-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%,100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .25
+            }
+        }
+
+        .v-txt {
+            font-size: .58rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--cream-dim);
+        }
+
+        .v-num {
+            font-family: 'Playfair Display',serif;
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        /* REVEAL */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .8s ease, transform .8s ease;
+        }
+
+            .reveal.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        .d1 {
+            transition-delay: .1s
+        }
+
+        .d2 {
+            transition-delay: .2s
+        }
+
+        .d3 {
+            transition-delay: .3s
+        }
+
+        .d4 {
+            transition-delay: .4s
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:1100px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-right {
+                display: none;
+            }
+
+            .hero-left {
+                padding: 10rem 3rem 6rem;
+            }
+
+            nav {
+                padding: 1.4rem 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .feat-section {
+                grid-template-columns: 1fr;
+                padding: 5rem 2rem;
+                gap: 3rem;
+            }
+
+            .gallery-sec {
+                padding: 5rem 1rem;
+            }
+
+            .g-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .g-item:nth-child(1) {
+                grid-column: span 2;
+            }
+
+            .g-item:nth-child(6), .g-item:nth-child(10), .g-item:nth-child(13) {
+                grid-column: span 2;
+            }
+
+            .plating-sec {
+                padding: 5rem 2rem;
+            }
+
+            .plt-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-sec {
+                padding: 5rem 2rem;
+            }
+
+            .contact-inner {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            footer {
+                padding: 2rem;
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .lb-prev {
+                left: -10px;
+            }
+
+            .lb-next {
+                right: -10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cursor" id="cur"></div>
+    <div class="cursor-ring" id="curR"></div>
+
+    <!-- Visitor Badge -->
+    <div class="v-badge">
+        <div class="v-dot"></div>
+        <div>
+            <div class="v-txt">Total Visits</div>
+            <div class="v-num" id="vCount">—</div>
+        </div>
+    </div>
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <svg width="38" height="38" viewBox="0 0 42 42" fill="none">
+                <rect x="5" y="8" width="6" height="26" fill="#C9A84C" />
+                <rect x="31" y="8" width="6" height="26" fill="#C9A84C" />
+                <rect x="11" y="18" width="20" height="6" fill="#C9A84C" />
+                <line x1="21" y1="1" x2="21" y2="41" stroke="#C9A84C" stroke-width="1.1" opacity=".7" />
+                <line x1="1" y1="21" x2="41" y2="21" stroke="#C9A84C" stroke-width="1.1" opacity=".7" />
+                <line x1="5" y1="5" x2="37" y2="37" stroke="#C9A84C" stroke-width=".7" opacity=".45" />
+                <line x1="37" y1="5" x2="5" y2="37" stroke="#C9A84C" stroke-width=".7" opacity=".45" />
+                <circle cx="21" cy="21" r="2" fill="#C9A84C" />
+            </svg>
+            <div class="nav-brand">HEENA JEWELS<span>925 Silver Jewellery</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#gallery">Collection</a></li>
+            <li><a href="#plating">Finishes</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-rings">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+        </div>
+        <div class="hero-glow"></div>
+        <div class="hero-vline"></div>
+
+        <div class="hero-left">
+            <div class="eyebrow-row">
+                <div class="eyebrow-line"></div>
+                <span class="eyebrow-text">Est. in Rajkot, Gujarat</span>
+            </div>
+            <h1 class="hero-title">Handcrafted<br><span class="hero-italic">in Silver</span></h1>
+            <p class="hero-desc">Heena Jewels creates 925 sterling silver jewellery with antique artisan designs — crafted for those who value heritage, quality, and timeless elegance.</p>
+            <div class="badges">
+                <!--<span class="badge badge-g">925 Sterling Silver</span>-->
+                <span class="badge">Oxidised</span>
+                <span class="badge">Rhodium</span>
+                <span class="badge">Gold Finish</span>
+                <span class="badge">Meenakari</span>
+            </div>
+            <div class="cta-row">
+                <a href="#gallery" class="btn-p">View Collection</a>
+                <a href="#contact" class="btn-g">Enquire Now</a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="big-logo-wrap">
+                <div class="logo-ring"></div>
+                <div class="logo-ring"></div>
+                <svg width="160" height="160" viewBox="0 0 42 42" fill="none">
+                    <rect x="5" y="8" width="6" height="26" fill="#C9A84C" />
+                    <rect x="31" y="8" width="6" height="26" fill="#C9A84C" />
+                    <rect x="11" y="18" width="20" height="6" fill="#C9A84C" />
+                    <line x1="21" y1="0" x2="21" y2="42" stroke="#C9A84C" stroke-width="1.1" opacity=".7" />
+                    <line x1="0" y1="21" x2="42" y2="21" stroke="#C9A84C" stroke-width="1.1" opacity=".7" />
+                    <line x1="4" y1="4" x2="38" y2="38" stroke="#C9A84C" stroke-width=".7" opacity=".45" />
+                    <line x1="38" y1="4" x2="4" y2="38" stroke="#C9A84C" stroke-width=".7" opacity=".45" />
+                    <circle cx="21" cy="21" r="2.5" fill="#C9A84C" />
+                </svg>
+                <!--<div class="stat-cards">
+                    <div class="stat"><div class="n">925</div><div class="l">Sterling Silver</div></div>
+                    <div class="stat"><div class="n">3+</div><div class="l">Plating Options</div></div>
+                    <div class="stat"><div class="n">∞</div><div class="l">Custom Designs</div></div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <!--<div class="marquee">
+        <div class="marquee-track">
+            <span class="mi"><span class="dot"></span>925 Sterling Silver</span>
+            <span class="mi"><span class="dot"></span>Handcrafted Antique Designs</span>
+            <span class="mi"><span class="dot"></span>Oxidised Finish</span>
+            <span class="mi"><span class="dot"></span>Rhodium Plating</span>
+            <span class="mi"><span class="dot"></span>Gold Finish</span>
+            <span class="mi"><span class="dot"></span>Wholesale &amp; Retail</span>
+            <span class="mi"><span class="dot"></span>Custom Manufacturing</span>
+            <span class="mi"><span class="dot"></span>Skilled Artisans · Rajkot</span>
+            <span class="mi"><span class="dot"></span>925 Sterling Silver</span>
+            <span class="mi"><span class="dot"></span>Handcrafted Antique Designs</span>
+            <span class="mi"><span class="dot"></span>Oxidised Finish</span>
+            <span class="mi"><span class="dot"></span>Rhodium Plating</span>
+            <span class="mi"><span class="dot"></span>Gold Finish</span>
+            <span class="mi"><span class="dot"></span>Wholesale &amp; Retail</span>
+            <span class="mi"><span class="dot"></span>Custom Manufacturing</span>
+            <span class="mi"><span class="dot"></span>Skilled Artisans · Rajkot</span>
+        </div>
+    </div>-->
+    <!-- ABOUT / FEATURES -->
+    <section class="feat-section" id="about">
+        <div class="feat-left reveal">
+            <h2>Where <em>Heritage</em><br>Meets Craft</h2>
+            <p>Every piece from Heena Jewels is finished by skilled artisans, designed for both the discerning retail buyer and the wholesale trade.</p>
+            <div class="line"></div>
+        </div>
+        <div class="feat-grid reveal d2">
+            <div class="fc"><span class="fc-icon">🪙</span><h3>925 Sterling Silver</h3><p>Every piece is crafted from certified 925 sterling silver — durable, lustrous, and built to last generations.</p></div>
+            <div class="fc"><span class="fc-icon">🔨</span><h3>Handcrafted Antique</h3><p>Each design is hand-worked by skilled artisans, preserving intricate antique patterns with modern precision.</p></div>
+            <div class="fc"><span class="fc-icon">🏪</span><h3>Retail &amp; Wholesale</h3><p>We serve both individual buyers and bulk trade clients with consistent quality across all order sizes.</p></div>
+            <div class="fc"><span class="fc-icon">✏️</span><h3>Custom Manufacturing</h3><p>Bring your own design or concept — we'll manufacture it to exact specifications for your collection.</p></div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-sec" id="gallery">
+        <div class="sec-hdr reveal">
+            <div class="sec-eyebrow">Our Collection</div>
+            <h2 class="sec-title">Recent <em>Works</em></h2>
+            <p class="sec-sub">A glimpse into our latest handcrafted pieces. Click any image to explore in detail.</p>
+        </div>
+        <div class="g-grid" id="gGrid"></div>
+    </section>
+
+    <!-- PLATING -->
+    <section class="plating-sec" id="plating">
+        <div class="sec-hdr reveal">
+            <div class="sec-eyebrow">Surface Finishes</div>
+            <h2 class="sec-title">Plating <em>Options</em></h2>
+            <p class="sec-sub">Choose the finish that suits your style. Each plating transforms the same silver piece into a unique statement.</p>
+        </div>
+        <div class="plt-grid reveal d1">
+            <div class="plt-card"><div class="orb orb-ox"></div><h3>Oxidised Finish</h3><p>A dark antique patina that deepens the detail of carved and filigree work — the most traditional and sought-after look in Indian silver jewellery.</p></div>
+            <div class="plt-card"><div class="orb orb-rh"></div><h3>Rhodium Plating</h3><p>A bright, mirror-like platinum-white finish that resists tarnish and gives jewellery a contemporary, high-shine appearance for modern wear.</p></div>
+            <div class="plt-card"><div class="orb orb-gd"></div><h3>Gold Finish</h3><p>A warm gold tone applied over 925 silver — delivering the richness of gold jewellery at accessible pricing with excellent durability.</p></div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-sec" id="contact">
+        <div class="contact-inner">
+            <div class="c-left reveal">
+                <div class="sec-eyebrow" style="margin-bottom:1.4rem;">Get In Touch</div>
+                <h2>Let's Create<br><em>Together</em></h2>
+                <p>Whether you're a retailer, wholesaler, or individual looking for custom jewellery — we'd love to hear from you. Reach out for catalogues, pricing, or custom orders.</p>
+                <div class="c-details">
+                    <div class="c-item">
+                        <div class="c-icon">📍</div>
+                        <div class="c-txt"><h4>Location</h4><p>Rajkot, Gujarat, India – 360001</p></div>
+                    </div>
+                    <!--<div class="c-item">
+                        <div class="c-icon">🏭</div>
+                        <div class="c-txt"><h4>Specialisation</h4><p>925 Silver · Antique Handcrafted · Retail &amp; Wholesale · Custom Orders</p></div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="c-right reveal d2">
+                <div class="c-person">
+                    <div class="c-initial">T</div>
+                    <h3>Tarachandbhai N Patadia</h3>
+                    <!--<div class="role">Director</div>-->
+                    <div class="phone">+91 96018 16270</div>
+                </div>
+                <div class="c-person">
+                    <div class="c-initial">P</div>
+                    <h3>Purna T Patadia</h3>
+                    <!--<div class="role">Director</div>-->
+                    <div class="phone">+91 95585 70745</div>
+                </div>
+                <!--<div class="c-addr">
+                    <div class="c-addr-icon">🗺️</div>
+                    <div><h4>Our Workshop</h4><p>Rajkot, Gujarat, India – 360001</p></div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="f-brand">HEENA JEWELS<span>925 Silver Jewellery Manufacturers · Rajkot, Gujarat</span></div>
+        <div class="f-copy">© 2025 Heena Jewels. Crafted with ✦ in Rajkot.</div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lb" id="lb">
+        <div class="lb-bd" id="lbBd"></div>
+        <div class="lb-box">
+            <button class="lb-close" id="lbClose">✕ <span>Close</span></button>
+            <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+            <button class="lb-nav lb-next" id="lbNext">›</button>
+            <div class="lb-img-wrap">
+                <img class="lb-img" id="lbImg" src="" alt="" />
+            </div>
+            <div class="lb-foot">
+                <div>
+                    <div class="lb-name" id="lbName"></div>
+                    <div class="lb-wt" id="lbWt"></div>
+                </div>
+                <div class="lb-counter"><b id="lbCur">1</b> / <span id="lbTot">15</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script>// CURSOR
+        const cur = document.getElementById('cur'), curR = document.getElementById('curR');
+        let mx = 0, my = 0, rx = 0, ry = 0;
+        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+        (function loop() { cur.style.left = mx + 'px'; cur.style.top = my + 'px'; rx += (mx - rx) * .13; ry += (my - ry) * .13; curR.style.left = rx + 'px'; curR.style.top = ry + 'px'; requestAnimationFrame(loop); })();
+
+        // VISITOR COUNTER
+        (function () {
+            let c = parseInt(localStorage.getItem('hj_v') || '0');
+            if (!sessionStorage.getItem('hj_s')) { c++; localStorage.setItem('hj_v', c); sessionStorage.setItem('hj_s', '1'); }
+            document.getElementById('vCount').textContent = c.toLocaleString('en-IN');
+        })();
+
+        // PRODUCTS DATA
+        // ⬇ Replace each src with your actual image path, e.g. "images/ring1.jpg"
+        const products = [
+            { name: "", weight: "", src: "images/necklace_1.png" },
+            { name: "", weight: "", src: "images/necklace_2.png" },
+            { name: "", weight: "", src: "images/necklace_3.png" },
+            { name: "", weight: "", src: "images/necklace_4.png" },
+            { name: "", weight: "", src: "images/necklace_5.png" },
+            { name: "", weight: "", src: "images/necklace_6.png" },
+            { name: "", weight: "", src: "images/necklace_7.png" },
+            { name: "", weight: "", src: "images/necklace_8.png" },
+            { name: "", weight: "", src: "images/necklace_9.png" },
+            { name: "", weight: "", src: "images/necklace_10.png" },
+            { name: "", weight: "", src: "images/necklace_11.png" },
+            { name: "", weight: "", src: "images/necklace_12.png" },
+            { name: "", weight: "", src: "images/necklace_13.png" },
+            { name: "", weight: "", src: "images/necklace_14.png" },
+            { name: "", weight: "", src: "images/necklace_15.png" },
+            { name: "", weight: "", src: "images/necklace_16.png" },
+            { name: "", weight: "", src: "images/necklace_17.png" },
+            { name: "", weight: "", src: "images/necklace_18.png" },
+            { name: "", weight: "", src: "images/necklace_19.png" },
+            { name: "", weight: "", src: "images/necklace_20.png" },
+            { name: "", weight: "", src: "images/necklace_21.png" },
+            { name: "", weight: "", src: "images/necklace_22.png" },
+            { name: "", weight: "", src: "images/necklace_23.png" },
+            { name: "", weight: "", src: "images/necklace_24.png" },
+            { name: "", weight: "", src: "images/necklace_25.png" },
+            { name: "", weight: "", src: "images/necklace_26.png" },
+            { name: "", weight: "", src: "images/necklace_27.png" },
+            { name: "", weight: "", src: "images/necklace_28.png" },
+            { name: "", weight: "", src: "images/necklace_29.png" },
+            { name: "", weight: "", src: "images/necklace_30.png" },
+            { name: "", weight: "", src: "images/necklace_31.png" },
+            { name: "", weight: "", src: "images/necklace_32.png" },
+            { name: "", weight: "", src: "images/necklace_33.png" },
+            { name: "", weight: "", src: "images/necklace_34.png" },
+            { name: "", weight: "", src: "images/necklace_35.png" },
+            { name: "", weight: "", src: "images/necklace_36.png" },
+
+        ];
+
+        // BUILD GALLERY
+        const pholders = ['#1a1208', '#0f0f14', '#0e1208', '#140a08', '#12100a'];
+        const grid = document.getElementById('gGrid');
+        products.forEach((p, i) => {
+            const d = document.createElement('div');
+            d.className = 'g-item'; d.dataset.idx = i;
+            d.innerHTML = `
+                                                                                                                                                                      <img src="${p.src}" alt="${p.name}" loading="lazy"
+                                                                                                                                                                           onerror="this.style.display='none';this.parentElement.style.background='${pholders[i % 5]}';this.parentElement.style.minHeight='280px';"/>
+                                                                                                                                                                      <!--<div class="wt-badge">${p.weight}</div>-->
+                                                                                                                                                                      <div class="g-overlay">
+                                                                                                                                                                        <div class="g-name">${p.name}</div>
+                                                                                                                                                                        <div class="g-meta">925 Sterling Silver · Heena Jewels</div>
+                                                                                                                                                                      </div>
+                                                                                                                                                                      <div class="g-zoom">⊕</div>`;
+            d.addEventListener('click', () => openLB(i));
+            grid.appendChild(d);
+        });
+
+        // LIGHTBOX
+        const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'),
+            lbName = document.getElementById('lbName'), lbWt = document.getElementById('lbWt'),
+            lbCur = document.getElementById('lbCur'), lbTot = document.getElementById('lbTot');
+        lbTot.textContent = products.length;
+        let ci = 0;
+        function openLB(i) { ci = i; setLB(); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+        function closeLB() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+        function setLB() { const p = products[ci]; lbImg.src = p.src; lbImg.alt = p.name; lbName.textContent = p.name; lbWt.textContent = p.weight + ' · 925 Sterling Silver'; lbCur.textContent = ci + 1; }
+        document.getElementById('lbClose').onclick = closeLB;
+        document.getElementById('lbBd').onclick = closeLB;
+        document.getElementById('lbPrev').onclick = e => { e.stopPropagation(); ci = (ci - 1 + products.length) % products.length; setLB(); };
+        document.getElementById('lbNext').onclick = e => { e.stopPropagation(); ci = (ci + 1) % products.length; setLB(); };
+        document.addEventListener('keydown', e => {
+            if (!lb.classList.contains('open')) return;
+            if (e.key === 'Escape') closeLB();
+            if (e.key === 'ArrowLeft') { ci = (ci - 1 + products.length) % products.length; setLB(); }
+            if (e.key === 'ArrowRight') { ci = (ci + 1) % products.length; setLB(); }
+        });
+
+        // SCROLL REVEAL
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+        }, { threshold: .1 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));</script>
+</body>
+</html>
